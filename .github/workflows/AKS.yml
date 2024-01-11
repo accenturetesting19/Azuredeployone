@@ -61,7 +61,7 @@ jobs:
       uses: Azure/k8s-create-secret@v1.1
       with:
         # Container registry url
-        container-registry-url: https://index.docker.io/v1/
+        #container-registry-url: https://index.docker.io/v1/
         # Container registry username
         container-registry-username: '${{secrets.DOCKER_LOGIN}}'
         # Container registry password
