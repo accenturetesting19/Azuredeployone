@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: githubazuredemo
+spec:
+  selector:
+    matchLabels:
+      app: githubazuredemo
+  template:
+    metadata:
+      labels:
+        app: githubazuredemo
+    spec:
+      containers:
+      - name: githubazuredemo
+        image: sapnamanokar/githubactions-aks-demo
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
