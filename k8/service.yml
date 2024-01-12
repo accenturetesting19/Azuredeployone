@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: githubazuredemoservice
+spec:
+  selector:
+    app: githubazuredemo
+  type: LoadBalancer
+  ports:
+  - port: 3000
+    targetPort: 4000

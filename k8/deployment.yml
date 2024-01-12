@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: githubazuredemo
+spec:
+  selector:
+    matchLabels:
+      app: githubazuredemo
+  template:
+    metadata:
+      labels:
+        app: githubazuredemo
+    spec:
+      containers:
+      - name: githubazuredemo
+        image: sapnamanokar/githubactions-aks-demo
+        ports:
+        - containerPort: 3000
